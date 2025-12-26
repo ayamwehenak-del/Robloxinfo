@@ -1,0 +1,91 @@
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return """
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <title>Roblox InfoZone</title>
+        <style>
+            body {
+                font-family: Arial;
+                background-color: #0f0f0f;
+                color: white;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                background-color: #ff4444;
+                padding: 15px;
+                margin: 0;
+                font-size: 28px;
+            }
+            .card {
+                background-color: #1a1a1a;
+                border-radius: 12px;
+                padding: 15px;
+                margin: 20px auto;
+                width: 90%;
+                max-width: 400px;
+                box-shadow: 0 0 10px #ff4444;
+            }
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            h2 {
+                color: #ff6666;
+            }
+            p {
+                font-size: 14px;
+                color: #ddd;
+            }
+            a.button {
+                display: inline-block;
+                background-color: #ff4444;
+                padding: 10px 15px;
+                color: white;
+                border-radius: 8px;
+                text-decoration: none;
+                margin-top: 8px;
+                font-size: 14px;
+            }
+            a.button:hover {
+                background-color: #ff7777;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🔥 Roblox InfoZone 🔥</h1>
+        <h3>Berita & Event Roblox</h3>
+
+        <div class="card">
+            <img src="https://tr.rbxcdn.com/35e04b7e6b3b2a0a0e3c15ae8d07a987/420/420/Image/Png">
+            <h2>🎄 Event Natal 2025 di Roblox!</h2>
+            <p>Hadiah baru dan update keren siap menunggu pemain.</p>
+            <a class="button" href="https://www.roblox.com/home" target="_blank">Baca Selengkapnya</a>
+        </div>
+
+        <div class="card">
+            <img src="https://tr.rbxcdn.com/0bffd2c7b1b19f3a72d4b5673bdf2b57/420/420/Image/Png">
+            <h2>💎 Kode Promo Roblox</h2>
+            <p>Gunakan kode: ROBLOX2025HOLIDAY untuk klaim topi gratis.</p>
+            <a class="button" href="https://www.roblox.com/promocodes" target="_blank">Buka Halaman Kode</a>
+        </div>
+
+        <div class="card">
+            <img src="https://tr.rbxcdn.com/272aa4272d833cf650543da152109de6/420/420/Image/Png">
+            <h2>🔥 Tips Developer Game Roblox</h2>
+            <p>Pelajari cara bikin game populer di Roblox Studio cuma dalam 1 jam!</p>
+            <a class="button" href="https://create.roblox.com/" target="_blank">Lihat Tips</a>
+        </div>
+    </body>
+    </html>
+    """
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
